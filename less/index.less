@@ -91,14 +91,18 @@ header{
 			.flexDisplay(flex-end,center);
 			height:100%;
 			@media @mobile{
-				justify-content: space-evenly;
-				font-size:1.4rem;
+				justify-content: space-between;
+				
 			}
 			a{
 				margin-left: 5%;
 				color:black;
 				text-decoration: none;
 				font-size:1.6rem;
+				@media @mobile {
+					margin:0;
+					font-size:1.4rem;
+				}
 				
 				
 			}
@@ -117,19 +121,33 @@ header{
 	background-color: @background-color;
 	padding:4% 2%;
 	width: 100%;
-	height: 90vh;
+	height: 90%;
+	@media @mobile {
+		height:70%;
+	}
 	.main-box{
 		height:72%;
+	
 		img{
 			height:auto;
 			width:40%;
+			@media @mobile {
+				width:100%;
+				
+			}
 		}
 		h1{
 			font-size: 5.5rem;
+			@media @mobile {
+				font-size: 3rem;;
+			}
 		}
 		h3{
 			font-size: 2rem;
 			margin:1%0;
+			@media @mobile {
+				font-size: 2rem;
+			}
 		}
 		hr{
 			color: @background-color;
@@ -170,15 +188,25 @@ header{
 			font-size: 2.5rem;
 			font-weight: bold;
 			margin:2%0;
+			@media @mobile {
+				font-size:1.8rem
+			}
 		}
 		p{
 			font-size: 1.6rem;
 			line-height: 2rem;
+			@media @mobile {
+				font-size: 1.4rem;
+				line-height: 1.6rem;
+			}
 		}
 		h2{
 			font-size: 2rem;
 			font-weight: bold;
 			margin:2%0;
+			@media @mobile {
+				font-size:1.6rem
+			}
 		}
 		ul{
 			border: @background-color 1px solid ;
@@ -186,6 +214,10 @@ header{
 			padding-left: 3%;
 			font-size: 1.6rem;
 			.flexDisplay(flex-start, center);
+			@media @mobile {
+				font-size: 1.4rem;
+				
+			}
 		}
 	}
 }
@@ -240,16 +272,16 @@ header{
 
 
 // DEV TOOLS//
-section{
-	border:red 1px solid;
-}
-div{
-	border:lime 1px solid;
-}
-nav{
-	border: pink 1px solid;
-}
-h4{
-	border: orange 1px solid;
-}
+// section{
+// 	border:red 1px solid;
+// }
+// div{
+// 	border:lime 1px solid;
+// }
+// nav{
+// 	border: pink 1px solid;
+// }
+// h4{
+// 	border: orange 1px solid;
+// }
 
