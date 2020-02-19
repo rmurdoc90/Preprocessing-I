@@ -164,8 +164,8 @@ header div nav a {
   height: 72%;
 }
 .section-one .main-box img {
-  height: 60%;
-  width: 30%;
+  height: auto;
+  width: 40%;
 }
 .section-one .main-box h1 {
   font-size: 6rem;
@@ -193,6 +193,37 @@ header div nav a {
   border: #505050;
   border-radius: 0.2rem;
   font-size: 1.4rem;
+}
+.section-two {
+  display: flex;
+  height: 45vh;
+  margin: 2%0;
+}
+.section-two div {
+  width: 50%;
+}
+.section-two div h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 2%0;
+}
+.section-two div p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+.section-two div h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2%0;
+}
+.section-two div ul {
+  border: #bbbbbb 1px solid;
+  height: 16%;
+  padding-left: 3%;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 section {
   border: red 1px solid;
