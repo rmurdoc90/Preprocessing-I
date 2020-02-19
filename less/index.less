@@ -19,7 +19,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	// border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -50,10 +50,53 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	font-size:62.5%
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	margin:.5% 4% 0% 4%;
+}
+
+.flexDisplay(@justifyContent,@alignItems){
+	display:flex;
+	justify-content:@justifyContent;
+	align-items:@alignItems;
+}
+//NAV START
+
+header{
+	display:flex;
+	height:7vh;
+	div{
+		width:50%;
+		nav{
+			.flexDisplay(flex-end,center);
+			height:100%;
+			a{
+				margin-left: 4%;
+				color:black;
+				text-decoration: none;
+				font-size:1.6rem;
+				
+				
+			}
+		}
+	} 
+}
+
+
+
+
+// DEV TOOLS//
+section{
+	border:red 1px solid;
+}
+div{
+	border:lime 1px solid;
+}
+nav{
+	border: pink 1px solid;
 }
 
