@@ -133,11 +133,11 @@ table {
 html,
 body {
   height: 100%;
-  margin: 0.5% 4% 0% 4%;
+  margin: 0.5% 8% 0% 8%;
 }
 header {
   display: flex;
-  height: 7vh;
+  height: 8vh;
 }
 header div {
   width: 50%;
@@ -149,10 +149,50 @@ header div nav {
   height: 100%;
 }
 header div nav a {
-  margin-left: 4%;
+  margin-left: 5%;
   color: black;
   text-decoration: none;
   font-size: 1.6rem;
+}
+.section-one {
+  background-color: rgba(220, 220, 220, 0.609);
+  padding: 4% 2%;
+  width: 100%;
+  height: 90vh;
+}
+.section-one .main-box {
+  height: 72%;
+}
+.section-one .main-box img {
+  height: 60%;
+  width: 30%;
+}
+.section-one .main-box h1 {
+  font-size: 6rem;
+}
+.section-one .main-box h3 {
+  font-size: 2rem;
+  margin: 1%0;
+}
+.section-one .main-box hr {
+  color: gainsboro;
+  margin: 2%0;
+}
+.section-one .box {
+  height: 25%;
+}
+.section-one .box p {
+  font-size: 1.6rem;
+  height: 50%;
+}
+.section-one .box button {
+  width: 11rem;
+  height: 3rem;
+  background-color: #505050;
+  color: white;
+  border: #505050;
+  border-radius: 0.2rem;
+  font-size: 1.4rem;
 }
 section {
   border: red 1px solid;
