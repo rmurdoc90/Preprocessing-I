@@ -56,8 +56,12 @@ table {
 
 html, body {
 	height: 100%;
-	margin:.5% 8% 0% 8%;
+	margin:0 8%;
+	@media @mobile {
+		margin:0 1%;	
+	}
 }
+//MIXINS
 
 .flexDisplay(@justifyContent,@alignItems){
 	display:flex;
@@ -65,17 +69,31 @@ html, body {
 	align-items:@alignItems;}
 
 @background-color:rgba(220, 220, 220, 0.692);
+@button-color:rgb(80, 80, 80);
+
+@mobile: ~'(max-width:500px)';
+
+
+//MIXINS
 
 //NAV START
 
 header{
 	display:flex;
-	height:8vh;
+	height:10vh;
 	div{
 		width:50%;
+		@media @mobile {
+			width:100%;
+			
+		}
 		nav{
 			.flexDisplay(flex-end,center);
 			height:100%;
+			@media @mobile{
+				justify-content: space-evenly;
+				font-size:1.4rem;
+			}
 			a{
 				margin-left: 5%;
 				color:black;
@@ -86,6 +104,11 @@ header{
 			}
 		}
 	} 
+	.div-one{
+		@media @mobile {
+			display: none;			
+		}
+	}
 }
 //NAV END
 
@@ -102,7 +125,7 @@ header{
 			width:40%;
 		}
 		h1{
-			font-size: 6rem;
+			font-size: 5.5rem;
 		}
 		h3{
 			font-size: 2rem;
@@ -123,9 +146,9 @@ header{
 		button{
 			width:11rem;
 			height:3rem;
-			background-color: rgb(80, 80, 80);
+			background-color: @button-color;
 			color: white;
-			border:rgb(80, 80, 80);
+			border:@button-color;
 			border-radius: .2rem;
 			font-size: 1.4rem;
 		}
@@ -200,6 +223,19 @@ header{
 }
 
 //SECTION THREE END
+
+//FOOTER SECTION START
+	footer{
+		height:11vh;
+		background-color: @button-color;
+		color:white;
+		text-align: center;
+		padding-top: 2%;
+		font-size: 1.2rem;
+		margin-top: 4%;
+	}
+
+//FOOTER SECTION END
 
 
 

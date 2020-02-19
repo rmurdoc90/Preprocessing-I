@@ -133,14 +133,25 @@ table {
 html,
 body {
   height: 100%;
-  margin: 0.5% 8% 0% 8%;
+  margin: 0 8%;
+}
+@media (max-width:500px) {
+  html,
+  body {
+    margin: 0 1%;
+  }
 }
 header {
   display: flex;
-  height: 8vh;
+  height: 10vh;
 }
 header div {
   width: 50%;
+}
+@media (max-width:500px) {
+  header div {
+    width: 100%;
+  }
 }
 header div nav {
   display: flex;
@@ -148,11 +159,22 @@ header div nav {
   align-items: center;
   height: 100%;
 }
+@media (max-width:500px) {
+  header div nav {
+    justify-content: space-evenly;
+    font-size: 1.4rem;
+  }
+}
 header div nav a {
   margin-left: 5%;
   color: black;
   text-decoration: none;
   font-size: 1.6rem;
+}
+@media (max-width:500px) {
+  header .div-one {
+    display: none;
+  }
 }
 .section-one {
   background-color: rgba(220, 220, 220, 0.692);
@@ -168,7 +190,7 @@ header div nav a {
   width: 40%;
 }
 .section-one .main-box h1 {
-  font-size: 6rem;
+  font-size: 5.5rem;
 }
 .section-one .main-box h3 {
   font-size: 2rem;
@@ -257,6 +279,15 @@ header div nav a {
 .section-three .grid-two,
 .section-three .grid-four {
   background-color: rgba(220, 220, 220, 0.692);
+}
+footer {
+  height: 11vh;
+  background-color: #505050;
+  color: white;
+  text-align: center;
+  padding-top: 2%;
+  font-size: 1.2rem;
+  margin-top: 4%;
 }
 section {
   border: red 1px solid;
