@@ -19,7 +19,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	// border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -50,10 +50,238 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	font-size:62.5%
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	margin:0 8%;
+	@media @mobile {
+		margin:0 1%;	
+	}
 }
+//MIXINS
+
+.flexDisplay(@justifyContent,@alignItems){
+	display:flex;
+	justify-content:@justifyContent;
+	align-items:@alignItems;}
+
+@background-color:rgba(220, 220, 220, 0.692);
+@button-color:rgb(80, 80, 80);
+
+@mobile: ~'(max-width:500px)';
+
+
+//MIXINS
+
+//NAV START
+
+header{
+	display:flex;
+	height:10vh;
+	div{
+		width:50%;
+		@media @mobile {
+			width:100%;
+			
+		}
+		nav{
+			.flexDisplay(flex-end,center);
+			height:100%;
+			@media @mobile{
+				justify-content: space-between;
+				
+			}
+			a{
+				margin-left: 5%;
+				color:black;
+				text-decoration: none;
+				font-size:1.6rem;
+				@media @mobile {
+					margin:0;
+					font-size:1.4rem;
+				}
+				
+				
+			}
+		}
+	} 
+	.div-one{
+		@media @mobile {
+			display: none;			
+		}
+	}
+}
+//NAV END
+
+//SECTION ONE START
+.section-one{
+	background-color: @background-color;
+	padding:4% 2%;
+	width: 100%;
+	height: 90%;
+	@media @mobile {
+		height:70%;
+	}
+	.main-box{
+		height:72%;
+	
+		img{
+			height:auto;
+			width:40%;
+			@media @mobile {
+				width:100%;
+				
+			}
+		}
+		h1{
+			font-size: 5.5rem;
+			@media @mobile {
+				font-size: 3rem;;
+			}
+		}
+		h3{
+			font-size: 2rem;
+			margin:1%0;
+			@media @mobile {
+				font-size: 2rem;
+			}
+		}
+		hr{
+			color: @background-color;
+			margin:2%0;
+		}
+
+	}
+	.box{
+		height:25%;
+		p{
+			font-size:1.6rem;
+			height:50%;
+		}
+		button{
+			width:11rem;
+			height:3rem;
+			background-color: @button-color;
+			color: white;
+			border:@button-color;
+			border-radius: .2rem;
+			font-size: 1.4rem;
+		}
+	
+	}
+}
+
+//SECTION ONE END
+
+//SECTION TWO
+
+.section-two{
+	display: flex;
+	height:45vh;
+	margin:2%0;
+	div{
+		width:50%;
+		h1{
+			font-size: 2.5rem;
+			font-weight: bold;
+			margin:2%0;
+			@media @mobile {
+				font-size:1.8rem
+			}
+		}
+		p{
+			font-size: 1.6rem;
+			line-height: 2rem;
+			@media @mobile {
+				font-size: 1.4rem;
+				line-height: 1.6rem;
+			}
+		}
+		h2{
+			font-size: 2rem;
+			font-weight: bold;
+			margin:2%0;
+			@media @mobile {
+				font-size:1.6rem
+			}
+		}
+		ul{
+			border: @background-color 1px solid ;
+			height:16%;
+			padding-left: 3%;
+			font-size: 1.6rem;
+			.flexDisplay(flex-start, center);
+			@media @mobile {
+				font-size: 1.4rem;
+				
+			}
+		}
+	}
+}
+
+//SECTION TWO END
+
+//SECTION THREE START
+.section-three{
+	margin:2%0;
+	h2{
+		font-size: 2rem;
+			font-weight: bold;
+			margin-bottom: 1%;
+	}
+	div{
+		width:100%;
+		height:6vh;
+		display: inline-grid;
+		grid-template-columns: 15% 25% 40% auto ;
+		padding-left: 2%;
+		border: @background-color 1px solid;
+		h4{
+			font-size: 1.4rem;
+			font-weight: bold;
+			.flexDisplay(flex-start, center)
+		}
+		h3{
+			font-size: 1.3rem;
+			.flexDisplay(flex-start, center)
+		}
+	}
+	.grid-two, .grid-four{
+		background-color: @background-color;
+	}
+}
+
+//SECTION THREE END
+
+//FOOTER SECTION START
+	footer{
+		height:11vh;
+		background-color: @button-color;
+		color:white;
+		text-align: center;
+		padding-top: 2%;
+		font-size: 1.2rem;
+		margin-top: 4%;
+	}
+
+//FOOTER SECTION END
+
+
+
+// DEV TOOLS//
+// section{
+// 	border:red 1px solid;
+// }
+// div{
+// 	border:lime 1px solid;
+// }
+// nav{
+// 	border: pink 1px solid;
+// }
+// h4{
+// 	border: orange 1px solid;
+// }
 
